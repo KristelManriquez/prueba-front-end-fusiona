@@ -1,0 +1,70 @@
+<DOCTYPE html>
+  <html lang="es">
+    <head>
+      <meta charset="utf-8" />
+      <title>Front-End Prueba - Fusiona</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet"
+      />
+      <link rel="stylesheet" href="css/styles.css" />
+
+    </head>
+    <body>
+      <!--
+        Reglas de la prueba:
+
+        ## Descripción
+        1. La prueba consiste en desarrollar una página web con HTML, CSS y JS. Usando como referencia el figma compartido. 
+        2. La página debe ser responsive, es decir, debe verse bien en dispositivos móviles y de escritorio.
+        3. La página debe ser desarrollada con HTML, CSS y JS plano, no se puede usar ningún framework.
+        4. La pagina consiste de 3 componentes, un textarea, una botonera y un sidebar.
+        5. Se evaluará la consistencia del código en relación al diseño propuesto.
+
+        ## Desarrollo
+        1. Mediante JS se debe capturar el texto ingresado en el textarea.
+        2. Al presionar el botón "Transformar", se debe validar que el texto no tenga números, de ser válido, imprimir el texto y transformarlo a mayúsculas
+        3. Al presionar el botón "Limpiar", se debe limpiar el textarea y el sidebar debe volver a su estado inicial.
+        -->
+      <div class="container">
+        <!-- textarea + botones (form) -->
+        <div class="right-container">
+          <form>
+            <textarea id="text-input" class="textarea" placeholder="Ingresa tu texto aqu&iacute;"></textarea>
+            <div class="btns-container">
+              <div class="column">
+                <button type="button" id="clear-btn" class="generic-btn outlined-btn">Limpiar</button>
+              </div>
+              <div class="column">
+                <button type="button" id="transform-btn" class="generic-btn filled-btn">Transformar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <section class="sidebar" id="sidebar">
+          <!-- imagen + texto predeterminado -->
+          <div id="default-content" class="default-content">
+            <div class="search-img-container">
+              <img src="img/ilustracion.svg"></img>
+            </div>
+            <div class="msg-container">
+              <h3>Ning&uacute;n mensaje </br> encontrado</h3>
+              <p>Ingresa el texto </br> que desees transformar</p>
+            </div>
+          </div> 
+           <!-- texto transformado -->
+          <div id="transformed-content" class="transformed-content" style="display: none;">
+            <p id="output-text"></p>
+          </div>
+        </section>
+      </div>
+      <script src="js/scripts.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </body>
+  </html>
+</DOCTYPE>
